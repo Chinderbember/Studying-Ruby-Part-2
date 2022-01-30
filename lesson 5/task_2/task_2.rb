@@ -1,12 +1,6 @@
 # frozen_string_literal: true
 
-class User
-  attr_accessor :info
-
-  def initialize(info = 'default')
-    @info = info
-  end
-end
+require_relative 'lib/user_class'
 
 user_fst = User.new
 puts "Пользователь 1: #{user_fst.info}"
