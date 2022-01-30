@@ -1,14 +1,6 @@
 # frozen_string_literal: true
 
-class Hello
-  def initialize(destination)
-    @destination = destination
-  end
-
-  def say
-    "Hello, #{@destination}"
-  end
-end
+require_relative 'lib/hello_class'
 
 hello = Hello.new('world')
 puts hello.say
