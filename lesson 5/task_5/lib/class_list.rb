@@ -22,5 +22,11 @@ class List
       List.increase_count(1)
     end
   end
+  def each(*params)
+    obj = self
+    params.size.times do |count|
+      obj.send("instance#{count + 1}=", params[count])
+    end
+  end
 end
 # rubocop:enable Style/ClassVars
