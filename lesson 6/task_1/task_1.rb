@@ -1,13 +1,7 @@
 # frozen_string_literal: true
+require_relative 'lib/array_processing_class'
 
-arr = %i[first second third]
+arr_fst = %i[first second third]
+arr_snd = [*1..arr_fst.size]
 
-def arr_for_hash(arr_fst, arr_snd)
-	result_arr = []
-	arr_fst.size.times do |n|
-		result_arr << [arr_fst[n], arr_snd[n]]
-	end
-	result_arr
-end
-
-p arr_for_hash(arr, [*1..arr.size])
+puts Array_processing.arr_for_hash(arr_fst, arr_snd ).to_h
