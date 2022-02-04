@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-require_relative 'lib/array_processing_class'
+arr = %i[first second third]
 
-arr_fst = %i[first second third]
-arr_snd = [*1..arr_fst.size]
-
-puts ArrayProcessing.arr_for_hash(arr_fst, arr_snd).to_h
+result_arr = arr.to_h { |el| [el, [1, 2, 3][arr.index(el)]] }
+puts result_arr
