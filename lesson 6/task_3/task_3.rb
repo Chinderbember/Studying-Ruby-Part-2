@@ -6,4 +6,6 @@ str = <<here
 больше 5. Подсчитайте количество слов и выведите их алфавитном порядке.
 here
 
-p (str.split.map { |str| str.chomp('.').chomp(',') }).select {|str| str.size > 5}
+arr = (str.downcase.split.map { |str| str.chomp('.').chomp(',') }).select {|str| str.size > 5}
+puts "Количество слов, в которых символов больше 5: #{arr.size}"
+puts arr.sort 
