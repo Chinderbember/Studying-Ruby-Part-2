@@ -3,8 +3,7 @@
 class User
   attr_accessor :surname, :name, :patronymic, :email
 
-  def initialize 
+  def initialize
     yield self
   end
-
 end
