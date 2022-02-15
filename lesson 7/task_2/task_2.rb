@@ -9,7 +9,4 @@ default_user = User.new do |user|
   user.email = 'default email'
 end
 
-puts default_user.surname
-puts default_user.name
-puts default_user.patronymic
-puts default_user.email
+%i[surname name patronymic email].each { |method| puts default_user.send(method) }
