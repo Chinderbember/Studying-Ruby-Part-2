@@ -17,6 +17,10 @@ class User
   alias to_s say
 end
 
+# rubocop:disable Naming/ConstantName
+
 UsualUser, Author, Admin, Moderator = [*1..4].map do
   Class.new(User)
 end
+
+# rubocop:enable Naming/ConstantName
