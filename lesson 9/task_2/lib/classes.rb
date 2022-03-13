@@ -44,5 +44,4 @@ class Testclass
   def method_snd
     @operation_kit.method_snd
   end
-
 end
