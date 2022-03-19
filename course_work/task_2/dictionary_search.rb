@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
-require_relative 'lib/calendar'
+$stdin = File.open('lib/dictionary.txt')
+str = gets('$$') 
 
-dict = %w[котопёс котяра котофей компьютер компьютерный компьютеризация]
+dict = str.split
 new_dict = []
+
 found = nil
 dict.each do |word|
 	if word == ARGV[0]
@@ -21,4 +23,7 @@ elsif new_dict.empty?
 else 
 	p new_dict
 end
+
+
+
 
